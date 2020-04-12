@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-04-11_2202",
-    "currentPage": "index.html",
+    "currentPage": "page1.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -13,7 +13,7 @@
         "warningColor": "#767676",
         "dangerColor": "#a0a0a0",
         "mainFont": "Roboto",
-        "display1Font": "Source Sans Pro",
+        "display1Font": "Raleway",
         "display1Size": 4.5,
         "display2Font": "Roboto",
         "display2Size": 2.2,
@@ -45,10 +45,20 @@
         "css": "'Source Sans Pro', sans-serif",
         "name": "Source Sans Pro",
         "url": "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+      },
+      {
+        "css": "'Merriweather', serif",
+        "name": "Merriweather",
+        "url": "https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i"
+      },
+      {
+        "css": "'Raleway', sans-serif",
+        "name": "Raleway",
+        "url": "https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 3,
+    "uniqCompNum": 4,
     "versionPublish": "4.12.2",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -98,6 +108,58 @@
           "_customHTML": "<section class=\"header2\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Image Width\" name=\"imageWidth\" min=\"0\" max=\"100\" step=\"1\" value=\"100\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-lg-8\">\n                <h1 class=\"mbr-fonts-style align-center mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Mark D. Ramirez<br></h1>\n                <h3 class=\"mbr-fonts-style align-center\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-5\"></h3>\n                <div class=\"mbr-text align-center\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod at id fugiat natus a voluptas eveniet officia iure nihil nostrum ad, modi ipsam, dicta ullam accusamus, voluptate aspernatur. Accusamus, aliquid?\n                    </p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Bio</a>  <a class=\"btn btn-md btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Research</a>\n                    <a class=\"btn btn-md btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Teaching</a> <a class=\"btn btn-md btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Contact</a></div>\n                <amp-img src=\"@PROJECT_PATH@/assets/images/screen-shot-2020-04-11-at-10.09.09-pm-940x1434.png\" alt=\"Mobirise\" width=\"731.5481171548117\" height=\"1116\" layout=\"responsive\" class=\"mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/screen-shot-2020-04-11-at-10.09.09-pm-940x1434.png\" alt=\"Mobirise\" title>\n                </amp-img>\n            </div>\n        </div>\n    </div>\n\n</section>",
           "_cid": "rVUYdVpRiL",
           "_anchor": "header2-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "title": "Page 1",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when (@flexDirection)": {
+              ".mbr-row": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            ".text-block": {
+              "margin": "auto"
+            },
+            "amp-img": {
+              "text-align": "center"
+            },
+            "@media (min-width: 768px)": {
+              ".image-block when (@flexDirection)": {
+                "padding-left": "2rem"
+              },
+              ".image-block when not (@flexDirection)": {
+                "padding-right": "2rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image-block": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".btn when (@showButtons)": {
+              "margin": ".4rem 4px !important"
+            }
+          },
+          "_name": "features10",
+          "_customHTML": "<section class=\"features10\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n       \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"image-block mbr-col-sm-12 mbr-col-md-6\">\n                <amp-img src=\"@THEME_PATH@/components/_images/img/02.jpg\" layout=\"responsive\" width=\"523.5\" height=\"349\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@THEME_PATH@/components/_images/img/02.jpg\" alt=\"Mobirise\">\n                </amp-img>\n            </div>\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-6\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Biography</h3>\n                <p class=\"mbr-fonts-style mbr-text align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Dr. Mark D. Ramirez is an Associate Professor in the School of Politics and Global Studies at Arizona State University. He studies the role of democratic and non-democratic processes on political preference formation. His research appears in the <i>American Journal of Political Science</i>, <i>British Journal of Political Science</i>, <i>Criminology</i>, <i>Journal of Politics</i>, <i>Journal of Ethnicity in Criminal Justice</i>, <i>Journal of Conflict Resolution</i>,<i> Political Behavior</i>, <i>Political Psychology</i>, <i>Public Opinion Quarterly</i>, <i>Race &amp; Justice</i>, and <i>The Political Methodologist</i>. He is the current organizer of the <b>Working Group in Political Psychology</b> and is also affiliated with the Provost's <b>Southwest Borderlands Initiative</b>,  the <b>Center for Latina/os and American Politics Research</b>, the <b>Center for the Future of War</b> and the <b>National Institute for Civil Discourse</b>. Prior to Arizona State University, he served as a research fellow at the <b>Center for Empirical Research in the Law</b> at Washington University in Saint Louis and a Ford Foundation Dissertation Fellow.</p>\n                <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-sm btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Research</a> <a class=\"btn btn-sm btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Teaching</a> <a class=\"btn btn-sm btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">Contact</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rVVjRcNUR5",
+          "_anchor": "features10-3",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
