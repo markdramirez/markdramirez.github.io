@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-04-11_2202",
-    "currentPage": "page1.html",
+    "currentPage": "page2.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -26,7 +26,10 @@
         "isRoundedButtons": false,
         "isScrollToTopButton": false,
         "arrowColor": "#4ea2e3"
-      }
+      },
+      "additionalSetColors": [
+        "#212529"
+      ]
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.12.2",
@@ -58,7 +61,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 4,
+    "uniqCompNum": 6,
     "versionPublish": "4.12.2",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -115,9 +118,9 @@
         }
       ]
     },
-    "page1.html": {
+    "page2.html": {
       "settings": {
-        "title": "Page 1",
+        "title": "Reasearch",
         "order": 1
       },
       "components": [
@@ -127,45 +130,66 @@
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             "background-color": "@bgColor",
-            "& when (@flexDirection)": {
-              ".mbr-row": {
-                "-webkit-flex-direction": "row-reverse",
-                "flex-direction": "row-reverse"
+            ".counter-container": {
+              "ul": {
+                "margin-bottom": "0",
+                "li": {
+                  "color": "inherit",
+                  "padding-bottom": "1rem",
+                  "& when (@stylizedCounters)": {
+                    "list-style": "none",
+                    "&:before": {
+                      "box-sizing": "inherit",
+                      "position": "absolute",
+                      "left": "0px",
+                      "padding-top": "3px",
+                      "content": "''",
+                      "display": "inline-block",
+                      "text-align": "center",
+                      "margin": "10px 15px",
+                      "line-height": "20px",
+                      "transition": "all .2s",
+                      "color": "contrast(@counterColor)",
+                      "background": "@counterColor",
+                      "width": "10px",
+                      "height": "10px",
+                      "border-radius": "50%",
+                      "& when (@countersType = 'circle')": {
+                        "background": "none",
+                        "border": "1px solid @counterColor",
+                        "color": "@counterColor"
+                      },
+                      "& when (@countersType = 'square')": {
+                        "border-radius": "0"
+                      },
+                      "& when (@countersType = 'romb')": {
+                        "border-radius": "0",
+                        "-webkit-transform": "rotate(45deg)",
+                        "transform": "rotate(45deg)"
+                      }
+                    }
+                  }
+                }
               }
-            },
-            ".text-block": {
-              "margin": "auto"
-            },
-            "amp-img": {
-              "text-align": "center"
-            },
-            "@media (min-width: 768px)": {
-              ".image-block when (@flexDirection)": {
-                "padding-left": "2rem"
-              },
-              ".image-block when not (@flexDirection)": {
-                "padding-right": "2rem"
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".image-block": {
-                "padding-bottom": "1rem"
-              }
-            },
-            ".btn when (@showButtons)": {
-              "margin": ".4rem 4px !important"
             }
           },
-          "_name": "features10",
-          "_customHTML": "<section class=\"features10\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"2\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Media on Left/Right\" name=\"flexDirection\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n       \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"image-block mbr-col-sm-12 mbr-col-md-6\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/iu-768x430.png\" layout=\"responsive\" width=\"523.3116279069767\" height=\"293\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/iu-768x430.png\" alt=\"Mobirise\" title=\"\">\n                </amp-img>\n            </div>\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-6\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Biography</h3>\n                <p class=\"mbr-fonts-style mbr-text align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Dr. Mark D. Ramirez is an Associate Professor in the School of Politics and Global Studies at Arizona State University. He studies the role of democratic and non-democratic processes on political preference formation with a special emphasis on how these processes impact racial and ethnic minorities. His research appears in the <i>American Journal of Political Science</i>, <i>British Journal of Political Science</i>, <i>Criminology</i>, <i>Journal of Politics</i>, <i>Journal of Ethnicity in Criminal Justice</i>, <i>Journal of Conflict Resolution</i>,<i> Political Behavior</i>, <i>Political Psychology</i>, <i>Public Opinion Quarterly</i>, <i>Race &amp; Justice</i>, and <i>The Political Methodologist</i>. He is the current organizer of the <b>Working Group in Political Psychology</b> and is also affiliated with the Provost's <b>Southwest Borderlands Initiative</b>,  the <b>Center for Latina/os and American Politics Research</b>, the <b>Center for the Future of War</b> and the <b>National Institute for Civil Discourse</b>. Prior to Arizona State University, he served as a research fellow at the <b>Center for Empirical Research in the Law</b> at Washington University in Saint Louis and a Ford Foundation Dissertation Fellow.</p>\n                <div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\"><a class=\"btn btn-sm btn-danger\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">READ MORE</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rVVjRcNUR5",
-          "_anchor": "features10-3",
+          "_name": "content7",
+          "_customHTML": "<section class=\"content7 mbr-section\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"color\" title=\"Counter Color\" name=\"counterColor\" value=\"#4ea2e3\" condition=\"stylizedCounters\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <select title=\"Counters Type\" name=\"countersType\" condition=\"stylizedCounters\">\n            <option value=\"default\">Сircle Fill</option>\n            <option value=\"circle\">Circle</option>\n            <option value=\"square\">Square</option>\n            <option value=\"romb\" selected>Rhombus</option>\n\n        </select>   \n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"mbr-container\">\n        <div class=\"mbr-text counter-container mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n            <ul>\n                <li>Paul M. Kellstedt, Mark D. Ramirez, Arnold Vedlitz, and Sammy Zahran. 2019. “Does political sophistication moderate value conflict? The case of climate change.\" British Journal of Political Science, 49(4): 1309-1332.</li>\n                <li>Mark D. Ramirez and Reed Wood. 2019. \"Public Attitudes toward Private Military Corporations: Insight from Principal-agent Theory.\" Journal of Conflict Resolution. 63(6): 1433-1459.</li>\n                <li>Peter Enns and Mark D. Ramirez. 2018. \"Privatizing Punishment: Testing theories of public support for private prison and immigration detention facilities.\" Criminology. 56(3): 546-573.</li><li>Mark D. Ramirez and Paul G. Lewis. 2018. \"Beliefs About Corporate America and the Structure of Opinions Toward Privatization.\" Political Behavior. 40(4): 1011-1034.</li><li>Reed Wood and Mark D. Ramirez. 2018. “Exploring the micro-foundations of the relationship between gender equality and peace.\" International Studies Review. 20(3): 345-367.</li><li>Mark D. Ramirez. 2015. “Racial discrimination, fear of crime, and variability in Blacks’ preferences for punitive and preventative anti-crime policies.\" Political Behavior, 37(2): 419-439.</li><li>Mark D. Ramirez. 2015. “African American’s principled opposition to prison privatization.\" Journal of Ethnicity in Criminal Justice, 13(3): 217-236.</li><li>Mark D. Ramirez. 2014. “Complex choices: African Americans and the death penalty.\" Race &amp; Justice, 4(2): 75-97.</li><li>Mark D. Ramirez and Nathan Erickson. 2014. “Partisan bias and information discounting in economic judgments.\" Political Psychology, 35(3): 309-445.</li><li>Mark D. Ramirez. 2013. \"Americans changing views toward crime and punishment.\" Public Opinion Quarterly, 77(4): 1006-1031.</li><li>Mark D. Ramirez. 2013. \"Punitive Sentiment.\" Criminology, 52(2): 329-364.</li><li>Mark D. Ramirez. 2013. \"The Policy Origins of Congressional Approval.\" Journal of Politics, 75(1): 198-209.</li><li>Paul M. Kellstedt, David A.M. Peterson, and Mark D. Ramirez. 2010. \"The Macro Politics of a Gender Gap.\" Public Opinion Quarterly, 74(3): 477-498.</li><li>Mark D. Ramirez. 2009. \"The Dynamics of Partisan Conflict on Congressional Approval.\" American Journal of Political Science, 53(3): 680-693.</li><li>Nicholson-Crotty, Sean, David A.M. Peterson, and Mark D. Ramirez. 2009. \"Dynamic Representation(s): Federal Criminal Justice Policy and an Alternative Dimension of Public Mood.\" Political Behavior, 31(4): 485-655.</li><li>Mark D. Ramirez. 2008. \"Procedural Perceptions and Support for the U.S. Supreme Court.\" Political Psychology, 29(5): 675-698.</li>\n            </ul>\n        </div>\n    </div>\n</section>",
+          "_cid": "rVVsnvHWRv",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "content7-4"
         }
       ]
+    },
+    "page3.html": {
+      "settings": {
+        "title": "Page 3",
+        "order": 2
+      },
+      "components": []
     }
   }
 }
