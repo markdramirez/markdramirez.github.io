@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-04-11_2202",
-    "currentPage": "index.html",
+    "currentPage": "page2.html",
     "theme": {
       "name": "mobirise-amp",
       "title": "Mobirise AMP",
@@ -61,7 +61,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 6,
+    "uniqCompNum": 7,
     "versionPublish": "4.12.2",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -120,7 +120,7 @@
     },
     "page2.html": {
       "settings": {
-        "title": "Reasearch",
+        "title": "Research",
         "order": 1
       },
       "components": [
@@ -187,7 +187,7 @@
     "page3.html": {
       "settings": {
         "title": "Page 3",
-        "order": 2
+        "order": 3
       },
       "components": []
     }
